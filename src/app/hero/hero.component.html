@@ -1,0 +1,37 @@
+<!-- <p *ngIf="name === 'Boothstomper'">{{name}} hero works!</p>
+<p *ngIf="name !== 'Boothstomper'">Hero was not found</p> -->
+
+<p *ngIf="name === 'Boothstomper'; else noHero">{{name}} hero works!</p>
+<ng-template #noHero><p>Hero was not found</p></ng-template> 
+<button (click)="liked.emit(true)">Like</button> -->
+
+
+<!-- <ul>
+    <li *ngFor="let hero of heroes">{{hero.name}}</li>
+</ul>  -->
+
+
+<!-- property -->
+<!-- 
+    <li *ngFor="let hero of heroes; property as variable"></li>
+    can have the following values: index, first/last, even/odd 
+ -->
+
+        <!-- index -->
+        <!-- number assigned to each object an array -->
+
+            <!-- <li *ngFor="let hero of heroes; index as myIndex">{{myIndex+1}}. {{hero.name}}</li> -->
+
+        <!-- trackby -->
+        <!-- angular deals with variations to a collection by keeping DOM elements in memory.  internally, it uses something called object identiy to keep track of every item in the collection.  we can, however, use a specific property of the iterable items instead of the internal angular object identiy using the "trackby" property -->
+
+            <!-- <ul><li *ngFor="let hero of heroes; trackBy: trackByHeroes"></li></ul> -->
+
+
+
+<!-- ngSwitch (is an exception to the asterix rule) -->
+<!-- <div [ngSwitch]="hero.team">
+    <div *ngSwitchCase="'avengers'">{{hero.name}} is avenger</div>
+    <div *ngSwitchCase="'villains'">{{hero.name}} is villain</div>
+    <div *ngSwitchDefault>{{hero.name}}</div>
+</div> -->
